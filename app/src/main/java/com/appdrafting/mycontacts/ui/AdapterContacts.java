@@ -57,7 +57,7 @@ public class AdapterContacts extends RecyclerView.Adapter<AdapterContacts.MyView
                 new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        mActivity.addAndEditContact(true, vContact, position);
+                        mActivity.addAndEditContact(true, vContact, holder.getAdapterPosition());
                     }
                 }
         );

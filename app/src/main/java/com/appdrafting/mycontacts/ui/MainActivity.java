@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.floatingActionButton)
-    public void addCar(View pView) {
+    public void addContact(View pView) {
         addAndEditContact(false, null, -1);
     }
 
@@ -164,7 +164,7 @@ public class MainActivity extends AppCompatActivity {
 
                 if (isUpdate && pContact != null) {
 
-                    updateCar(
+                    updateContact(
                             teFirstName.getText().toString(),
                             teLastName.getText().toString(),
                             teEmail.getText().toString(),
@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
                     );
                 } else {
 
-                    createCar(
+                    createContact(
                             teFirstName.getText().toString(),
                             teLastName.getText().toString(),
                             teEmail.getText().toString(),
@@ -191,7 +191,7 @@ public class MainActivity extends AppCompatActivity {
         new DeleteContactAsyncTask().execute(pContact);
     }
 
-    private void updateCar(
+    private void updateContact(
             String pFirstName,
             String pLastName,
             String pEmail,
@@ -211,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
         mListContacts.set(pPosition, vContact);
     }
 
-    private void createCar(
+    private void createContact(
             String pFirstName,
             String pLastName,
             String pEmail,
